@@ -4,6 +4,8 @@
 
 A personal 2026 college football workspace with all **138 FBS teams**. The website has no runtime dependencies, accounts, API keys, or build requirement. Your rankings stay in your own browser.
 
+Backfield Football branding uses a black-and-gold default theme and an optional gold-and-white light theme. The theme selection is saved in this browser. **Quick tutorial** explains ranking, saving history, and exporting a backup.
+
 ## Open the website
 
 - **Localhost:** double-click `Start Localhost.cmd`, then open **http://localhost:4173**. Node.js 24 is available on the development computer. Keep the command window open while using the site.
@@ -23,6 +25,8 @@ A personal 2026 college football workspace with all **138 FBS teams**. The websi
 - After the first explicit save, future weeks record your latest order automatically when you use the app. Manual snapshots stay fixed, and the app does not add an automatic snapshot to a week that already has a manual save.
 - Open a team to see its schedule and separate power/playoff graphs. Click a graph point, then confirm, to remove only that team's historical entry. Ranking history also lets you view or delete entire snapshots with confirmation.
 - Rankings save in browser storage. **Export backup** downloads a portable JSON file with both boards, eliminations, and history. **Import backup** validates and restores it after confirmation.
+- Leaving a ranking board with changes since its last explicit save offers **Save and continue**, **Continue without saving**, or **Stay on this board**. Saving records a snapshot before navigating; continuing without saving preserves the browser draft without adding history. Unchanged boards do not interrupt navigation.
+- Closing or reloading a page with unsaved changes requests the browser's standard warning where supported. A browser cannot block switching to another browser tab. If browser storage is unavailable, saving also starts a JSON backup download.
 - The file, localhost, and GitHub Pages versions have **separate browser storage**. Move rankings between them with Export/Import. Clearing browser data and private browsing can remove automatic saves. Keep exported copies. File URL storage is browser dependent; localhost is recommended for reliable automatic saving.
 - A browser page cannot save weekly changes while closed. It records later weeks when you next open or use it.
 
