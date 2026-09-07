@@ -19,6 +19,18 @@ Backfield Football branding uses a black-and-gold default theme and an optional 
 - The playoff eliminator has an **independent order of playoff hopes**, initially copied from the alphabetical power board. Every team still displays its power rank. Use **Use power order** to copy your current power order into the eliminator.
 - Click × or drop a team in the eliminated section to eliminate it. Restore it with ↶. This never removes a team from power rankings. Elimination is your opinion; the app does not automatically judge postseason eligibility or decide who qualifies.
 
+## Top 25 presentation
+
+Select **Present Top 25**, then **Start presentation** to count down from **No. 25 to No. 1 using your own current national power rankings**. Conference filters, search results and playoff-hopes order do not change the presentation. Each team slide includes its season record, full schedule, latest completed game and saved power ranking history. The final slide creates a Top 25 graphic with all teams, records and ranking movement.
+
+Before starting, optionally enable **Include a “Just missed out” slide**. Choose an ending rank from **27 through 35**: the graphic includes every team from **26** to that rank (2–10 teams). It appears before No. 25 and has its own download buttons. Leave the option off to start directly at No. 25.
+
+Use **Previous / Next**, arrow keys, Page Up / Page Down, or Space on the slide. **Home** restarts the reveal, **End** opens the final graphic, and **Esc / Close** exits. **Full screen** is available in supporting browsers. Both graphics can be downloaded as **1600 × 1000 PNG** images or scalable **SVG** files. On smaller screens, scroll the graphic horizontally to read every team.
+
+The presentation freezes the current board and available score data when started. It does not create history, save the board, or discard draft edits. Ranking graphs show up to 12 recent saved power rankings and a separate current-board point; no history is invented for an unsaved team. Movement compares with its latest eligible save, excluding the current week's automatic snapshot. Refresh scores or download schedules before presenting for newer results.
+
+Presentations work offline. The portable `publish/index.html` embeds logos for offline graphic downloads. When opening the source `index.html` directly, some browsers block reading local logos for export; the downloaded graphic uses team abbreviations for unavailable logos. Localhost and the hosted version embed the downloaded logos normally.
+
 ## Ranking history and saving
 
 - **History starts only when you first click Save ranking on that board.** The initial alphabetical order and unsaved edits are never included in the graphs or movement indicators.
@@ -67,6 +79,14 @@ The complete source can be committed to the supplied repository's `main` branch.
 Alternatively, upload the contents of the generated `publish/` directory to the repository root and select **Deploy from a branch → main → / (root)** in Pages settings. This compact distribution embeds all logos, data, styles, and scripts in `index.html`, with a small separate service worker for offline web access. It can also be opened offline as a single HTML file.
 
 Expected URL once GitHub confirms deployment: `https://schaafconnor0-collab.github.io/CollegeFootballEliminator/`. A prepared repository is not evidence that the site has been published.
+
+## Privacy and publication safeguards
+
+Rankings and backups stay on the visitor's device. The app has no accounts, analytics, advertising, tracking pixels, or upload endpoint. Live score requests go only to ESPN and explicitly omit cookies and the page referrer. GitHub and ESPN still receive ordinary connection information, such as an IP address, when their services are contacted.
+
+The local server binds only to the loopback interface and serves an explicit list of public website assets. Backups, project documentation, dependencies, hidden files, and development scripts cannot be requested through it. The build rejects unexpected files in `dist/` and `publish/`; keep personal backups outside those output folders. The offline worker caches only this site's listed assets, with a separate cache name per site path.
+
+Public commits also carry author metadata. Use GitHub's private-email setting for browser commits and a no-reply email for command-line commits. A clean website package alone does not make old Git history private.
 
 ## Sources and ownership
 
