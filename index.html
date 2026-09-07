@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-8arZ/7jfw4r25rSagboYIf5keYljiwLPeI8tDdjFlEA=' 'sha256-sR2rFVHuGKNtXnNzmQJ+0G18a57o2E/Hgv1DP7sgkPM=' 'sha256-O2H02flbU2VD5bt8/EhNkAorBDrlE8ohsArVGyuK9VQ=' 'sha256-78PwiJIW6zu0OdU+/1H8xYsqJubASVBzyIgdRNfqmx4='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://site.api.espn.com; manifest-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-8arZ/7jfw4r25rSagboYIf5keYljiwLPeI8tDdjFlEA=' 'sha256-sR2rFVHuGKNtXnNzmQJ+0G18a57o2E/Hgv1DP7sgkPM=' 'sha256-6fWfzKeP/aceYJ1HWYKWQRLr+6BT+JsHHJgI0HnDdy0=' 'sha256-78PwiJIW6zu0OdU+/1H8xYsqJubASVBzyIgdRNfqmx4='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://site.api.espn.com; manifest-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101010">
   <meta name="description" content="Rank 138 college football teams, manage a playoff elimination board, follow scores, and save ranking history. By Backfield Football.">
@@ -370,7 +370,8 @@ html.presenting{overflow:hidden}
     return `<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="top25-graphic-title" aria-describedby="top25-graphic-description" font-family="Arial, sans-serif"><title id="top25-graphic-title">${session.season} ${missed?`Just missed out, ranks 26–${entries.at(-1)?.rank}`:'Top 25'} national power rankings</title><desc id="top25-graphic-description">${esc(entries.map(t=>`No. ${t.rank}: ${t.name}, record ${t.record}, ${movement(t,true)}`).join('; '))}</desc><rect width="1600" height="1000" fill="#101211"/><rect x="48" y="45" width="66" height="5" fill="#dfb958"/>
       ${text(48,84,'BACKFIELD FOOTBALL',20,'#dfb958','letter-spacing="4"')}${text(44,178,missed?'JUST MISSED OUT':'THE TOP 25',missed?76:92,'#f6f3e9','font-weight="800" letter-spacing="-3"')}${text(1552,92,`${session.season} · ${session.week==='Postseason'?'POSTSEASON':`WEEK ${session.week}`}`,22,'#dfb958','text-anchor="end"')}${text(1552,131,date(session.createdAt),21,'#b4b1a6','text-anchor="end"')}${missed?text(48,216,`NOS. 26–${entries.at(-1)?.rank}`,19,'#aaa89f','letter-spacing="3"'):''}
       ${entries.map((entry,i)=>{
-        const x=48+Math.floor(i/rows)*columnStep,y=256+(i%rows)*130+(missed?(5-rows)*65:0),lines=wrapName(entry.name,missed?36:17),nameSize=missed?30:lines.length>2?19:23;
+        const column=missed?Math.floor(i/rows):i%5,row=missed?i%rows:Math.floor(i/5);
+        const x=48+column*columnStep,y=256+row*130+(missed?(5-rows)*65:0),lines=wrapName(entry.name,missed?36:17),nameSize=missed?30:lines.length>2?19:23;
         const src=logos.get(entry.id),changeColor=entry.change>0?'#83d7ab':entry.change<0?'#f1978c':'#aaa89f';
         if(missed&&rows<5){
           const step=Math.min(440,650/rows),height=step-18,top=256+(650-rows*step)/2+(i%rows)*step;
