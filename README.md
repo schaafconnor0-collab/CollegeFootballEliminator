@@ -35,16 +35,16 @@ Presentations work offline. The portable `publish/index.html` embeds logos for o
 
 ## Playoff predictor presentation
 
-Open **Video Tools → Build playoff prediction**. Choose contenders and a projected champion for the ACC, Big Ten, Big 12 and SEC. The **Group of 6** combines the American, Conference USA, MAC, Mountain West, Pac-12 and Sun Belt into one contender pool with one projected automatic qualifier.
+Open **Video Tools → Open playoff predictor**. Choose contenders and a projected champion for the ACC, Big Ten, Big 12 and SEC. The **Group of 6** combines the American, Conference USA, MAC, Mountain West, Pac-12 and Sun Belt into one contender pool with one projected automatic qualifier.
 
 Place twelve different teams using the dropdown beside each seed on the bracket. All 138 teams, including independents, are available; chosen teams disappear from the other dropdowns. All four projected conference champions and the Group of 6 qualifier must appear before **Predict the games** becomes available. The top four seeds receive byes; champions are not restricted to those seeds. First-round matchups are 8–9, 5–12, 6–11 and 7–10, feeding seeds 1, 4, 3 and 2 respectively.
 
 Click the winning team in each of the eleven games. A later matchup becomes selectable once both teams are known. Changing a seed or result removes subsequent picks that no longer fit. Once a champion is selected, **Create presentation** opens a 35-slide deck:
 
-1. A teal-and-ivory playoff thumbnail showing the projected field, distinct from the Top 25 stadium thumbnail.
+1. A gold-and-charcoal title thumbnail with an obscured, anonymous bracket. It contains no selected teams, seeds, logos or results, including in its exported SVG.
 2. Two slides per conference group: the selected contenders' logos, followed by the same lineup with the projected winner circled.
 3. A blank bracket, then each of the five automatic qualifiers in its assigned seed, followed by each remaining team from highest to lowest seed.
-4. One game result per slide through the first round, quarterfinals, semifinals and championship. The completed bracket and national champion are the final slide.
+4. One game result per slide through the first round, quarterfinals, semifinals and championship. The final slide shows the completed bracket and states “[Team] wins the national championship,” using the selected winner’s name.
 
 Click the slide or use **Next**, arrow keys, Page Up / Page Down, or Space to reveal the next pick. **Home** returns to the thumbnail; **End** goes to the completed bracket. **Full screen** hides the controls; Escape restores them on the same slide. Each slide downloads as a **1920 × 1080 PNG** or self-contained **SVG**. On narrow screens the editable bracket scrolls horizontally; presentation slides fit the screen.
 
