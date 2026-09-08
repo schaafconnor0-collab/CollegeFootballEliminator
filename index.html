@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-VA66vpW7/iF2/W5h4Hvhrr9Ar0X1qoF5AfGp2rylESo=' 'sha256-91zXd2k/4EKJm7jwwIco/9VAQUVhf1wj5GCfYj52gY0=' 'sha256-QFB4OATI+HgHsomi59zbjfc+0KErHX8wPGEZPIBgk6A=' 'sha256-6UgsujS/UvupoHgkEXtVTYc0Bnon5nFOPi40d54EXkU='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://site.api.espn.com; manifest-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-VA66vpW7/iF2/W5h4Hvhrr9Ar0X1qoF5AfGp2rylESo=' 'sha256-91zXd2k/4EKJm7jwwIco/9VAQUVhf1wj5GCfYj52gY0=' 'sha256-QFB4OATI+HgHsomi59zbjfc+0KErHX8wPGEZPIBgk6A=' 'sha256-IriOjYi2yG8kbbuNI5LtyoF05Y0jy8lU2wZo8YMde1U=' 'sha256-Ot+ATK3ongu8Mnh9ZDgMXl0JNZyBNhUuXtQwdHe7arw='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://site.api.espn.com; manifest-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101010">
   <meta name="description" content="Rank 138 college football teams, manage a playoff elimination board, follow scores, and save ranking history. By Backfield Football.">
@@ -84,6 +84,27 @@ html.presenting{overflow:hidden}
 .presentation-shell:fullscreen .presentation-recap svg{width:100%;height:100%;max-width:100%;max-height:100%;min-height:0}
 .presentation-setup{width:min(1000px,100%);padding-top:32px}.presentation-setup h2{font-size:40px;margin:12px 0}.presentation-thumbnail-options{border:0;padding:0;margin:26px 0 18px;min-width:0}.presentation-thumbnail-options legend{font-size:20px;font-weight:700;color:#f6f3e9}.presentation-thumbnail-options>p{font-size:14px;color:#b4b1a6;line-height:1.5;margin:10px 0 16px}.presentation-thumbnail-selects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:20px}.presentation-thumbnail-selects label{font-size:14px;color:#b4b1a6}.presentation-thumbnail-selects select{display:block;width:100%;min-width:0;margin-top:8px}.presentation-thumbnail-preview{max-width:640px;margin:0 auto;background:#060d19;aspect-ratio:16/9}.presentation-thumbnail-preview svg{display:block;width:100%;height:auto}.presentation-thumbnail .presentation-recap{overflow:hidden;border:0}.presentation-thumbnail .presentation-recap svg{width:100%;max-width:100%;min-height:0}.presentation-shell:fullscreen .showing-thumbnail{padding:0;justify-content:center;background:#000}.presentation-shell:fullscreen .presentation-thumbnail .presentation-recap{display:flex;align-items:center}.presentation-shell:fullscreen .presentation-thumbnail svg{height:auto;max-height:100dvh}
 @media(max-width:600px){.presentation-thumbnail-selects{grid-template-columns:1fr;gap:12px}.presentation-setup{padding-top:24px}.presentation-setup h2{font-size:34px}}
+
+/* Video tools share the workspace; the playoff deck has its own teal/ivory identity. */
+.video-tools{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:12px 0 30px}
+.video-tool-card{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:12px;padding:30px;min-height:254px;display:flex;align-items:center;background:var(--surface)}
+.video-tool-card>div{position:relative;max-width:78%}.video-tool-card h2{font-size:28px;margin:12px 0}.video-tool-card p:not(.eyebrow){font-size:16px;line-height:1.6;max-width:340px;color:var(--muted)}
+.video-tool-card .button{margin-top:10px}.video-tool-number{position:absolute;right:4px;bottom:-28px;font-size:170px;font-weight:900;letter-spacing:-14px;line-height:1;color:var(--gold);opacity:.12}.video-playoff{background:#0b3036;color:#f1f0e9;border-color:#456970}.video-playoff .eyebrow{color:#efba77}.video-playoff p:not(.eyebrow){color:#bdd0d0}.video-playoff .video-tool-number{color:#efba77;opacity:.2}
+.predictor-editor{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;scroll-margin-top:24px}
+.predictor-editor-top{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 26px 10px}.predictor-editor-top>strong{font-size:14px;letter-spacing:2px}.predictor-editor-top>div{display:flex;gap:22px;align-items:center;flex-wrap:wrap}.predictor-editor-top .text-button{font-size:14px}.predictor-import-label{cursor:pointer}.predictor-import-label:focus-within{outline:2px solid var(--gold);outline-offset:4px}
+.predictor-draft-note{font-size:14px;color:var(--muted);margin:4px 26px 22px;line-height:1.5}
+.predictor-steps{display:flex;gap:5px;overflow-x:auto;background:var(--bg);padding:14px 20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.predictor-steps button{background:transparent;border:0;color:var(--muted);padding:10px 12px;display:flex;align-items:center;gap:8px;white-space:nowrap;border-radius:6px;font-size:14px}.predictor-steps button>span{display:grid;place-items:center;width:23px;height:23px;border:1px solid var(--line);border-radius:50%;font-size:12px}.predictor-steps button[aria-current]{background:var(--gold);color:#161711;font-weight:700}.predictor-steps button:disabled{opacity:.4;cursor:not-allowed}
+#predictor-step-content{padding:26px}.predictor-step-heading{display:flex;justify-content:space-between;gap:32px;align-items:center;margin-bottom:24px}.predictor-step-heading h2{font-size:30px;margin:9px 0 12px;letter-spacing:-.7px}.predictor-step-heading p:not(.eyebrow){font-size:16px;color:var(--muted);line-height:1.6;margin:0;max-width:650px}.predictor-champ-select{font-size:14px;min-width:280px;display:block;font-weight:600}.predictor-champ-select select{display:block;width:100%;margin-top:10px;font-size:15px;min-height:46px;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:10px}
+.predictor-contenders{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}.predictor-team-choice{display:flex;align-items:center;gap:12px;position:relative;cursor:pointer;padding:13px;border:1px solid var(--line);border-radius:7px;min-height:72px;background:var(--bg)}.predictor-team-choice.selected{border-color:var(--gold);background:var(--surface)}.predictor-team-choice input{width:18px;height:18px;accent-color:#c49442;flex-shrink:0}.predictor-team-choice img,.predictor-qualifiers img{object-fit:contain;flex-shrink:0;background:#f1f0e9;border:3px solid #f1f0e9;border-radius:5px}.predictor-team-choice strong{font-size:15px;display:block}.predictor-team-choice small{font-size:12px;color:var(--muted);display:block;margin-top:5px}.predictor-aq-badge{font-size:10px;position:absolute;top:5px;right:7px;color:var(--gold)}
+.predictor-group-note{font-size:14px;color:var(--muted);line-height:1.6;margin:0 0 20px}.predictor-step-footer{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 26px;border-top:1px solid var(--line)}.predictor-step-footer p{font-size:14px;color:var(--muted);line-height:1.5;text-align:center;margin:0}.predictor-step-footer .button{flex-shrink:0}.predictor-step-footer .button:disabled{opacity:.4;cursor:not-allowed}.predictor-game-count{font-size:16px;color:var(--gold);white-space:nowrap}
+.predictor-qualifiers{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px}.predictor-qualifiers>span{display:flex;align-items:center;gap:9px;border:1px solid #956342;border-radius:7px;padding:9px 12px;font-size:14px}.predictor-qualifiers>span.included{border-color:#5b8e7a}.predictor-qualifiers small{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+.predictor-bracket-scroll{overflow:auto;border:1px solid #47636a;border-radius:9px;background:#092b32;color:#f1f0e9;scrollbar-color:#6d9395 #092b32}.predictor-bracket-board{position:relative;width:1440px;height:690px;font-family:Arial,Helvetica,sans-serif}.predictor-connections{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.predictor-round-label{position:absolute;top:16px;font-size:13px;letter-spacing:1.5px;color:#bdd0d0}.predictor-match{position:absolute;width:240px}.predictor-match-label{position:absolute;top:-18px;left:2px;font-size:11px;color:#bdd0d0}.predictor-seed-row,.predictor-pick{display:flex;align-items:center;gap:7px;width:240px;height:40px;padding:4px 7px;margin:0 0 4px;border:1px solid #6d9395;border-radius:4px;background:#f1f0e9;color:#092b32;font-size:14px;text-align:left}.predictor-seed-row>span,.predictor-seed-number{font-size:14px;font-weight:700;min-width:18px}.predictor-seed-row select{width:100%;min-width:0;height:30px;font-size:13px;color:#092b32;background:#f1f0e9;border:0;padding:2px}.predictor-seed-row img,.predictor-pick img{width:28px;height:28px;object-fit:contain;flex-shrink:0}.predictor-pick{font-weight:600;cursor:pointer}.predictor-pick>span:not(.predictor-seed-number){flex:1}.predictor-pick:hover:not(:disabled):not(.readonly){background:#f7dcad;border-color:#ed896e}.predictor-pick.picked{background:#e9be72;border-color:#e9be72}.predictor-pick:disabled{cursor:default;background:#264850;color:#a8c5c7;border-color:#456970}.predictor-pick.readonly{cursor:default;background:#264850;color:#a8c5c7}.predictor-champion{position:absolute;width:240px;text-align:center}.predictor-champion>span{display:block;font-size:13px;letter-spacing:1px;color:#e9be72;margin-bottom:16px}.predictor-champion img{display:block;width:92px;height:92px;object-fit:contain;margin:20px auto;background:#f1f0e9;border:10px solid #f1f0e9;border-radius:50%}.predictor-champion>strong{font-size:20px;color:#f1f0e9}
+.predictor-shell{height:100%;display:flex;flex-direction:column;overflow:hidden;background:#061e24}.predictor-slide{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;overflow:hidden;cursor:pointer;outline:none!important}.predictor-slide svg{display:block;width:100%;height:100%;max-height:100%;object-fit:contain}.predictor-shell:fullscreen{width:100%;height:100%;background:#061e24}.predictor-shell:fullscreen>:not(.predictor-slide){display:none!important}.predictor-shell:fullscreen .predictor-slide{height:100%;width:100%}.predictor-dialog .presentation-tools{flex-wrap:wrap}.predictor-editor:focus-visible,.predictor-editor :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+@media(min-width:1800px){.predictor-bracket-board{margin:auto}}
+@media(max-width:1100px){.predictor-step-heading{flex-direction:column;align-items:stretch;gap:20px}.predictor-champ-select{max-width:430px}.video-tool-card{padding:24px}.video-tool-card>div{max-width:92%}.video-tool-card h2{font-size:24px}.predictor-editor-top{flex-wrap:wrap}.predictor-editor-top>div{gap:18px}}
+@media(max-width:700px){.video-tools{grid-template-columns:1fr;gap:14px}.video-tool-card{min-height:220px}.predictor-step-heading h2{font-size:26px}.predictor-editor-top,#predictor-step-content{padding:20px 16px}.predictor-draft-note{margin:0 16px 18px}.predictor-steps{padding:10px}.predictor-contenders{grid-template-columns:1fr 1fr;gap:8px}.predictor-team-choice{padding:10px 8px;gap:7px}.predictor-team-choice strong{font-size:13px}.predictor-team-choice img{width:28px;height:28px}.predictor-team-choice input{width:16px;height:16px}.predictor-champ-select{min-width:0}.predictor-step-footer{padding:16px;flex-wrap:wrap;gap:14px}.predictor-step-footer p{order:-1;width:100%;text-align:left}.predictor-step-footer .button{font-size:13px}.predictor-dialog .presentation-toolbar{display:flex;flex-wrap:wrap}.predictor-dialog .presentation-tools .button{font-size:12px}.predictor-dialog .presentation-tools{gap:8px}.predictor-dialog .presentation-controls{padding:10px}.predictor-editor-top .text-button{font-size:13px}}
+@media(max-width:390px){.predictor-contenders{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -96,8 +117,8 @@ html.presenting{overflow:hidden}
         <button class="nav-item" data-view="playoff"><span aria-hidden="true">◎</span> Playoff eliminator <b id="nav-alive">138</b></button>
         <button class="nav-item" data-view="scores"><span aria-hidden="true">▣</span> Scores & schedule</button>
         <button class="nav-item" data-view="history"><span aria-hidden="true">↗</span> Ranking history</button>
+        <button class="nav-item" data-view="videos"><span aria-hidden="true">▶</span> Video Tools</button>
       </nav>
-      <button class="presentation-launch" data-presentation><span aria-hidden="true">▶</span> Present Top 25</button>
       <button class="tutorial-launch" data-tutorial><span aria-hidden="true">?</span> Quick tutorial</button>
       <div class="sidebar-bottom">
         <div class="save-status"><span class="dot"></span><div><strong id="save-label">Draft stored in this browser</strong><p id="save-time"></p></div></div>
@@ -133,6 +154,14 @@ html.presenting{overflow:hidden}
     </div>
   </dialog>
   <dialog id="team-dialog" class="team-dialog" aria-labelledby="team-title"><div id="team-content"></div></dialog>
+  <dialog id="predictor-dialog" class="presentation-dialog predictor-dialog" aria-labelledby="predictor-slide-title">
+    <div class="predictor-shell">
+      <header class="presentation-toolbar"><div class="presentation-wordmark">BACKFIELD <span>FOOTBALL</span><small>PLAYOFF PREDICTIONS</small></div><div class="presentation-tools"><button class="button small" data-predictor-export="png">Download PNG</button><button class="button small" data-predictor-export="svg">Download SVG</button><button class="button small" id="predictor-fullscreen">Full screen</button><button class="button small" id="predictor-close">Close ×</button></div></header>
+      <div id="predictor-slide" class="predictor-slide" tabindex="0" aria-label="Playoff presentation slide"></div>
+      <footer class="presentation-controls"><button class="button" id="predictor-prev">← Previous</button><div class="presentation-progress"><span id="predictor-counter" role="status" aria-live="polite"></span><progress id="predictor-progress" value="1" max="35" aria-label="Playoff presentation progress"></progress><small>← → to navigate · Home for thumbnail · End for champion · Esc to exit</small></div><button class="button primary" id="predictor-next">Next →</button></footer>
+      <p id="predictor-message" class="presentation-message" role="status" hidden></p>
+    </div>
+  </dialog>
   <dialog id="action-dialog" class="action-dialog" aria-labelledby="action-title"><form id="action-form" method="dialog"><div id="action-content"></div><p id="action-error" class="storage-warning" role="alert" hidden></p><div class="dialog-actions"><button type="button" class="button" id="action-cancel">Cancel</button><button type="submit" class="button primary" id="action-submit">Confirm</button></div></form></dialog>
   <dialog id="leave-dialog" class="action-dialog leave-dialog" aria-labelledby="leave-title"><h2 id="leave-title">Save changes before leaving?</h2><p id="leave-description"></p><label for="leave-week">Save for week</label><select id="leave-week"></select><p class="dialog-note" id="leave-note">Export a backup regularly to keep a separate file on your device.</p><div class="leave-actions"><button class="button primary" id="leave-save">Save and continue</button><button class="button" id="leave-without">Continue without saving</button><button class="text-button" id="leave-stay">Stay on this board</button></div></dialog>
   <dialog id="tutorial-dialog" class="tutorial-dialog" aria-labelledby="tutorial-title"><button class="close" data-close="tutorial-dialog" aria-label="Close tutorial">×</button><h2 id="tutorial-title">Quick tutorial</h2><ol class="tutorial-steps"><li><h3>Rank teams</h3><p>Drag a team, use the arrows, or click its rank. Conference rankings stay linked to the overall order. The playoff eliminator has a separate order; use × to eliminate a team and ↶ to restore it.</p></li><li><h3>Save a ranking</h3><p>Click <strong>Save ranking</strong> to keep a snapshot in ranking history. Graphs start with the first saved ranking, never the alphabetical setup. Save again after making changes.</p></li><li><h3>Export a backup</h3><p>Drafts and saved rankings are kept in this browser. <strong>Export backup</strong> downloads a file with both boards and their history. Keep that file: clearing browser data can remove local saves. Use <strong>Import backup</strong> to restore it or move to another device.</p></li></ol><div class="tutorial-bottom"><span>Leaving a changed board prompts a save reminder.</span><button class="button primary" data-close="tutorial-dialog">Done</button></div></dialog>
@@ -550,6 +579,230 @@ html.presenting{overflow:hidden}
   return {capture,result,graphic,thumbnail,thumbnailTeams,historyChart,create};
 });
 </script>
+<script>/* Offline playoff predictions and deterministic, logo-based presentation slides. */
+(function(root,factory){
+  const api=factory();
+  if(typeof module==='object'&&module.exports)module.exports=api;
+  else root.CFBPlayoff=api;
+})(typeof window!=='undefined'?window:globalThis,function(){
+  'use strict';
+  const KEY='cfe-playoff-prediction-v1';
+  const GROUPS=[
+    {id:'acc',name:'ACC',conferences:['ACC']},
+    {id:'bigten',name:'Big Ten',conferences:['Big Ten']},
+    {id:'big12',name:'Big 12',conferences:['Big 12']},
+    {id:'sec',name:'SEC',conferences:['SEC']},
+    {id:'group',name:'Group of 6',conferences:['American','Conference USA','MAC','Mountain West','Pac-12','Sun Belt']}
+  ];
+  // Topological order is also the presentation's game-by-game reveal order.
+  const GAMES=[
+    {id:'r1',round:0,label:'First round · 8 vs. 9',sources:[8,9],x:20,y:55},
+    {id:'r2',round:0,label:'First round · 5 vs. 12',sources:[5,12],x:20,y:225},
+    {id:'r3',round:0,label:'First round · 6 vs. 11',sources:[6,11],x:20,y:395},
+    {id:'r4',round:0,label:'First round · 7 vs. 10',sources:[7,10],x:20,y:565},
+    {id:'q1',round:1,label:'Quarterfinal 1',sources:[1,'r1'],x:310,y:55},
+    {id:'q2',round:1,label:'Quarterfinal 2',sources:[4,'r2'],x:310,y:225},
+    {id:'q3',round:1,label:'Quarterfinal 3',sources:[3,'r3'],x:310,y:395},
+    {id:'q4',round:1,label:'Quarterfinal 4',sources:[2,'r4'],x:310,y:565},
+    {id:'s1',round:2,label:'Semifinal 1',sources:['q1','q2'],x:600,y:140},
+    {id:'s2',round:2,label:'Semifinal 2',sources:['q3','q4'],x:600,y:480},
+    {id:'final',round:3,label:'National championship',sources:['s1','s2'],x:890,y:310}
+  ];
+  const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  function initial(){return {version:1,groups:Object.fromEntries(GROUPS.map(g=>[g.id,{contenders:[],champion:null}])),seeds:Array(12).fill(null),winners:{}};}
+  const participants=(state,game)=>game.sources.map(s=>typeof s==='number'?state.seeds[s-1]:state.winners[s]||null);
+  function trimWinners(state){
+    const winners={};
+    for(const game of GAMES){const pair=participants({...state,winners},game),pick=state.winners[game.id];if(pair.every(Boolean)&&pair.includes(pick))winners[game.id]=pick;}
+    state.winners=winners;return state;
+  }
+  function clean(raw,teams){
+    const state=initial(),ids=new Set(teams.map(t=>t.id));
+    if(!raw||typeof raw!=='object'||raw.version!==1)return state;
+    for(const group of GROUPS){
+      const allowed=new Set(teams.filter(t=>group.conferences.includes(t.conference)).map(t=>t.id));
+      const entry=raw.groups?.[group.id];
+      const contenders=Array.isArray(entry?.contenders)?[...new Set(entry.contenders.filter(id=>allowed.has(id)))]:[];
+      state.groups[group.id]={contenders,champion:contenders.includes(entry?.champion)?entry.champion:null};
+    }
+    const used=new Set();
+    state.seeds=state.seeds.map((_,i)=>{const id=raw.seeds?.[i];if(!ids.has(id)||used.has(id))return null;used.add(id);return id;});
+    for(const g of GAMES)if(ids.has(raw.winners?.[g.id]))state.winners[g.id]=raw.winners[g.id];
+    return trimWinners(state);
+  }
+  const qualifiers=state=>GROUPS.map(g=>state.groups[g.id].champion).filter(Boolean);
+  const groupReady=(state,i)=>!!state.groups[GROUPS[i].id].champion;
+  const conferencesReady=state=>GROUPS.every((_,i)=>groupReady(state,i));
+  function fieldErrors(state){
+    const errors=[];
+    if(!conferencesReady(state))errors.push('Choose all four conference champions and the Group of 6 qualifier.');
+    if(state.seeds.filter(Boolean).length!==12)errors.push('Fill all 12 seeds.');
+    if(new Set(state.seeds.filter(Boolean)).size!==state.seeds.filter(Boolean).length)errors.push('Each team can appear only once.');
+    const missing=qualifiers(state).filter(id=>!state.seeds.includes(id));
+    if(missing.length)errors.push(`Include all five automatic qualifiers (${missing.length} still missing).`);
+    return errors;
+  }
+  const complete=state=>fieldErrors(state).length===0&&GAMES.every(g=>state.winners[g.id]&&participants(state,g).every(Boolean)&&participants(state,g).includes(state.winners[g.id]));
+  function capture(raw,teams,season=2026){
+    const state=clean(raw,teams);
+    if(!complete(state))throw Error('Complete the conference picks, 12-team field, and all 11 games first.');
+    const slides=[{kind:'thumbnail',title:'Playoff predictions'}];
+    for(const group of GROUPS){slides.push({kind:'conference',group:group.id,reveal:false,title:`${group.name} contenders`});slides.push({kind:'conference',group:group.id,reveal:true,title:`${group.name} ${group.id==='group'?'qualifier':'champion'}`});}
+    slides.push({kind:'bracket',visible:[],games:[],title:'The playoff bracket'});
+    const aq=new Set(qualifiers(state)),order=[...state.seeds.filter(id=>aq.has(id)),...state.seeds.filter(id=>!aq.has(id))];
+    const visible=[];
+    for(const id of order){visible.push(id);const team=teams.find(t=>t.id===id);slides.push({kind:'bracket',visible:[...visible],games:[],highlight:id,title:`${aq.has(id)?'Automatic qualifier':'At-large'} · No. ${state.seeds.indexOf(id)+1} ${team.name}`});}
+    const games=[];
+    for(const game of GAMES){games.push(game.id);slides.push({kind:'bracket',visible:[...visible],games:[...games],highlight:state.winners[game.id],title:game.id==='final'?'Your national champion':`${game.label} · ${teams.find(t=>t.id===state.winners[game.id]).name} advances`});}
+    return {state,teams:teams.map(t=>({...t})),season,slides};
+  }
+  function svgImage(team,x,y,size,logos){
+    const src=logos?logos.get(team?.id):team?.logo;
+    return src?`<image href="${esc(src)}" x="${x}" y="${y}" width="${size}" height="${size}" preserveAspectRatio="xMidYMid meet"/>`:`<text x="${x+size/2}" y="${y+size*.62}" text-anchor="middle" fill="#143a40" font-size="${size*.25}" font-weight="800">${esc(team?.abbreviation||'?')}</text>`;
+  }
+  function svgFrame(title,season,body){return `<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" role="img" aria-labelledby="predictor-slide-title"><title id="predictor-slide-title">${esc(title)}</title><rect width="1920" height="1080" fill="#092b32"/><g font-family="Arial, Helvetica, sans-serif"><text x="72" y="62" fill="#e7bd70" font-size="22" font-weight="700" letter-spacing="4">BACKFIELD FOOTBALL</text><text x="1848" y="62" text-anchor="end" fill="#a8c5c7" font-size="22">${esc(season)} PLAYOFF PROJECTION</text>${body}<rect x="72" y="1020" width="1776" height="2" fill="#396169"/><text x="72" y="1057" fill="#a8c5c7" font-size="18" letter-spacing="3">ROAD TO THE TITLE</text><text x="1848" y="1057" text-anchor="end" fill="#a8c5c7" font-size="18">BACKFIELD FOOTBALL</text></g></svg>`;}
+  function connections(){
+    return GAMES.flatMap(game=>game.sources.filter(s=>typeof s==='string').map(source=>{
+      const from=GAMES.find(g=>g.id===source),x=from.x+240,y=from.y+42,mid=x+25;
+      return `M ${x} ${y} H ${mid} V ${game.y+42} H ${game.x}`;
+    })).concat(['M 1130 352 H 1180']).map(d=>`<path d="${d}" fill="none" stroke="#52757b" stroke-width="2"/>`).join('');
+  }
+  function bracketSvg(session,slide,logos){
+    const {state}=session,map=new Map(session.teams.map(t=>[t.id,t])),visible=new Set(slide.visible),shown=new Set(slide.games),aq=new Set(qualifiers(state));
+    const projection={...state,winners:Object.fromEntries(Object.entries(state.winners).filter(([id])=>shown.has(id)))};
+    function row(id,x,y,seed,placeholder,winner=false){
+      const t=visible.has(id)?map.get(id):null;
+      return `<g${t?` data-bracket-team="${esc(id)}"`:''}><rect x="${x}" y="${y}" width="240" height="40" rx="4" fill="${winner?'#e9be72':'#f1f0e9'}" stroke="${t&&slide.highlight===id?'#ed896e':'#69898c'}" stroke-width="${t&&slide.highlight===id?3:1}"/><text x="${x+13}" y="${y+26}" fill="#34575b" font-size="17" font-weight="700">${seed||''}</text>${t?svgImage(t,x+39,y+4,32,logos):''}<text x="${x+(t?80:45)}" y="${y+25}" fill="#092b32" font-size="${t&&t.name.length>17?13:16}" font-weight="700">${esc(t?t.name:placeholder||'')}</text>${t&&aq.has(t.id)?`<circle cx="${x+229}" cy="${y+7}" r="4" fill="#bc603b"/>`:''}</g>`;
+    }
+    const nodes=GAMES.map(game=>{
+      const pair=participants(projection,game);
+      return pair.map((id,i)=>{const src=game.sources[i],seed=typeof src==='number'?src:visible.has(id)?state.seeds.indexOf(id)+1:'';return row(id,game.x,game.y+i*44,seed,typeof src==='number'?'':`${src.toUpperCase()} winner`,shown.has(game.id)&&state.winners[game.id]===id);}).join('');
+    }).join('');
+    const champion=shown.has('final')?state.winners.final:null;
+    const championship=`<text x="1300" y="280" text-anchor="middle" fill="#e9be72" font-size="19" font-weight="700" letter-spacing="2">NATIONAL CHAMPION</text>${row(champion,1180,332,champion?state.seeds.indexOf(champion)+1:'','Your champion',!!champion)}${champion?`<rect x="1235" y="407" width="130" height="130" rx="65" fill="#f1f0e9" stroke="#e9be72" stroke-width="5"/>${svgImage(map.get(champion),1250,422,100,logos)}`:''}`;
+    return `<text x="72" y="143" fill="#f1f0e9" font-size="${slide.title.length>50?39:46}" font-weight="800">${esc(slide.title)}</text><g transform="translate(72 191) scale(1.25)">${['FIRST ROUND','QUARTERFINALS','SEMIFINALS','CHAMPIONSHIP'].map((label,i)=>`<text x="${[20,310,600,890][i]}" y="20" fill="#a8c5c7" font-size="17" letter-spacing="2">${label}</text>`).join('')}${connections()}${nodes}${championship}</g>`;
+  }
+  function graphic(session,index,logos){
+    const slide=session.slides[index];if(!slide)throw Error('Unknown slide');
+    let body='';
+    if(slide.kind==='thumbnail'){
+      body=`<rect x="0" y="118" width="890" height="860" fill="#f1f0e9"/><rect x="72" y="189" width="100" height="12" fill="#c56242"/><text x="72" y="273" font-size="28" fill="#34575b" letter-spacing="4">COLLEGE FOOTBALL</text><text x="64" y="460" font-size="160" font-weight="900" fill="#092b32" letter-spacing="-8">PLAYOFF</text><text x="72" y="567" font-size="86" font-weight="900" fill="#092b32" letter-spacing="-4">PREDICTIONS</text><text x="72" y="716" font-size="35" fill="#34575b" font-weight="700">12 TEAMS. ONE CHAMPION.</text><text x="72" y="913" font-size="26" fill="#c56242" font-weight="700" letter-spacing="5">THE ROAD STARTS HERE →</text><text x="1390" y="196" text-anchor="middle" fill="#e9be72" font-size="28" letter-spacing="5">THE PROJECTED FIELD</text>`;
+      session.state.seeds.forEach((id,i)=>{const t=session.teams.find(t=>t.id===id),x=965+(i%3)*300,y=245+Math.floor(i/3)*180;body+=`<g data-thumbnail-team="${esc(id)}"><rect x="${x}" y="${y}" width="254" height="150" rx="8" fill="#f1f0e9"/><text x="${x+15}" y="${y+28}" font-size="20" fill="#34575b" font-weight="700">${i+1}</text>${svgImage(t,x+81,y+13,92,logos)}<text x="${x+127}" y="${y+132}" text-anchor="middle" font-size="${t.name.length>20?16:20}" fill="#092b32" font-weight="700">${esc(t.name)}</text></g>`;});
+    }else if(slide.kind==='conference'){
+      const group=GROUPS.find(g=>g.id===slide.group),entry=session.state.groups[group.id],teams=entry.contenders.map(id=>session.teams.find(t=>t.id===id));
+      body=`<text x="72" y="162" font-size="76" fill="#f1f0e9" font-weight="800">${esc(group.name)}</text><text x="1848" y="154" text-anchor="end" font-size="25" fill="#e9be72" letter-spacing="3">${slide.reveal?group.id==='group'?'PROJECTED QUALIFIER':'PROJECTED CHAMPION':'THE CONTENDERS'}</text>`;
+      const cols=Math.min(teams.length,teams.length<=6?3:teams.length<=15?5:teams.length<=30?7:10),rows=Math.ceil(teams.length/cols),cw=1740/cols,ch=Math.min(360,750/rows),size=Math.min(205,cw*.65,ch*.62),top=225+(750-rows*ch)/2;
+      teams.forEach((t,i)=>{const col=i%cols,row=Math.floor(i/cols),count=Math.min(cols,teams.length-row*cols),x=960+(col-(count-1)/2)*cw,y=top+row*ch+ch*.42,isWinner=slide.reveal&&entry.champion===t.id;
+        body+=`<g data-contender="${esc(t.id)}"${isWinner?' data-conference-winner="true"':''}><rect x="${x-size/2-9}" y="${y-size/2-9}" width="${size+18}" height="${size+18}" rx="${(size+18)/2}" fill="#f1f0e9"/>${svgImage(t,x-size/2,y-size/2,size,logos)}${isWinner?`<ellipse cx="${x}" cy="${y}" rx="${size/2+20}" ry="${size/2+18}" fill="none" stroke="#ed896e" stroke-width="8" transform="rotate(-9 ${x} ${y})"/>`:''}<text x="${x}" y="${y+size/2+Math.min(48,ch*.21)}" text-anchor="middle" fill="${isWinner?'#e9be72':'#f1f0e9'}" font-size="${Math.min(30,cw/(t.name.length*.58),ch*.17)}" font-weight="700">${esc(t.name)}</text></g>`;
+      });
+    }else body=bracketSvg(session,slide,logos);
+    return svgFrame(slide.title,session.season,body);
+  }
+  function create({host,dialog,teams,season=2026,notify=()=>{}}){
+    const doc=host.ownerDocument,win=doc.defaultView,map=new Map(teams.map(t=>[t.id,t])),$=s=>host.querySelector(s),d=s=>dialog.querySelector(s);
+    let state=initial(),step=0,opened=false,session=null,index=0,opener=null,run=0,exporting=false,assets=null,storageWarning='',fullscreenPending=false;
+    try{const raw=win.localStorage.getItem(KEY);if(raw){const parsed=JSON.parse(raw);if(parsed?.version!==1)throw Error('Unsupported draft');state=clean(parsed,teams);}}catch{storageWarning='The saved prediction could not be loaded. Export your picks after editing to keep a copy.';}
+    const logo=id=>map.has(id)?`<img src="${esc(map.get(id).logo)}" alt="" width="36" height="36">`:'';
+    const save=()=>{try{win.localStorage.setItem(KEY,JSON.stringify(state));storageWarning='';}catch{storageWarning='Browser saving is unavailable. Export prediction to keep your picks.';notify(storageWarning);}};
+    const canVisit=i=>i<5?GROUPS.slice(0,i).every((_,n)=>groupReady(state,n)):i===5?conferencesReady(state):fieldErrors(state).length===0;
+    const ready=()=>step<5?groupReady(state,step):step===5?fieldErrors(state).length===0:complete(state);
+    function optionList(value){return '<option value="">Choose a team…</option>'+teams.filter(t=>t.id===value||!state.seeds.includes(t.id)).map(t=>`<option value="${esc(t.id)}" ${t.id===value?'selected':''}>${esc(t.name)}${qualifiers(state).includes(t.id)?' · AQ':''}</option>`).join('');}
+    function bracketEditor(picking){
+      const nodes=GAMES.map(game=>{
+        const pair=participants(state,game),playable=pair.every(Boolean);
+        const rows=game.sources.map((source,i)=>{
+          const id=pair[i],t=map.get(id),seed=t?state.seeds.indexOf(id)+1:typeof source==='number'?source:'';
+          if(!picking&&typeof source==='number')return `<label class="predictor-seed-row"><span>${source}</span>${logo(id)}<select data-predictor-seed="${source}" aria-label="Seed ${source}${source<=4?' · first-round bye':''}">${optionList(id)}</select></label>`;
+          const contents=`<span class="predictor-seed-number">${seed}</span>${logo(id)}<span>${esc(t?.name||(typeof source==='number'?`Seed ${source}`:`${source.toUpperCase()} winner`))}</span>${picking&&state.winners[game.id]===id&&id?'<b aria-hidden="true">✓</b>':''}`;
+          return picking?`<button class="predictor-pick ${id&&state.winners[game.id]===id?'picked':''}" data-predictor-game="${game.id}" data-predictor-winner="${esc(id||'')}" ${!playable?'disabled':''} aria-pressed="${!!id&&state.winners[game.id]===id}" aria-label="${esc(game.label)}: ${t?'pick '+esc(t.name):'awaiting teams'}">${contents}</button>`:`<div class="predictor-pick readonly">${contents}</div>`;
+        }).join('');
+        return `<div class="predictor-match" style="left:${game.x}px;top:${game.y}px"><span class="predictor-match-label">${game.round===1?'Q'+game.id.slice(1)+' · '+game.sources[0]+' seed bye':game.id.toUpperCase()}</span>${rows}</div>`;
+      }).join('');
+      return `<div class="predictor-bracket-scroll" tabindex="0" role="region" aria-label="12-team playoff bracket; scroll horizontally to see every round"><div class="predictor-bracket-board"><svg class="predictor-connections" viewBox="0 0 1440 690" aria-hidden="true">${connections()}</svg>${['FIRST ROUND','QUARTERFINALS','SEMIFINALS','CHAMPIONSHIP'].map((label,i)=>`<strong class="predictor-round-label" style="left:${[20,310,600,890][i]}px">${label}</strong>`).join('')}${nodes}<div class="predictor-champion" style="left:1180px;top:310px"><span>NATIONAL CHAMPION</span>${state.winners.final?`${logo(state.winners.final)}<strong>${esc(map.get(state.winners.final).name)}</strong>`:'<strong>Your champion</strong>'}</div></div></div>`;
+    }
+    function conferenceEditor(){
+      const group=GROUPS[step],entry=state.groups[group.id],roster=teams.filter(t=>group.conferences.includes(t.conference));
+      return `<div class="predictor-step-heading"><div><p class="eyebrow">CONFERENCE ${step+1} OF 5</p><h2>${esc(group.name)} contenders</h2><p>${group.id==='group'?'Choose contenders from all six conferences, then pick one automatic qualifier.':'Select your title contenders, then choose your projected conference champion.'}</p></div><label class="predictor-champ-select" for="predictor-conference-champion">${group.id==='group'?'Projected Group of 6 qualifier':'Projected conference champion'}<select id="predictor-conference-champion"><option value="">Choose from your contenders…</option>${entry.contenders.map(id=>`<option value="${esc(id)}" ${id===entry.champion?'selected':''}>${esc(map.get(id).name)}</option>`).join('')}</select></label></div>${group.id==='group'?'<p class="predictor-group-note">American · Conference USA · MAC · Mountain West · Pac-12 · Sun Belt</p>':''}<div class="predictor-contenders">${roster.map(t=>`<label class="predictor-team-choice ${entry.contenders.includes(t.id)?'selected':''}"><input type="checkbox" data-predictor-contender="${esc(t.id)}" ${entry.contenders.includes(t.id)?'checked':''}>${logo(t.id)}<span><strong>${esc(t.name)}</strong>${group.id==='group'?`<small>${esc(t.conference)}</small>`:''}</span>${entry.champion===t.id?'<b class="predictor-aq-badge">AQ</b>':''}</label>`).join('')}</div>`;
+    }
+    function render(focus){
+      const workspace=$('#predictor-workspace');if(!workspace)return;
+      const scrollLeft=workspace.querySelector('.predictor-bracket-scroll')?.scrollLeft||0;
+      workspace.hidden=!opened;if(!opened)return;
+      while(step>0&&!canVisit(step))step--;
+      const errors=step===5?fieldErrors(state):[];
+      workspace.innerHTML=`<section class="predictor-editor"><div class="predictor-editor-top"><strong>PLAYOFF PREDICTOR</strong><div><button class="text-button" data-predictor-backup>Export prediction</button><label class="text-button predictor-import-label">Import prediction<input type="file" id="predictor-import" accept=".json,application/json" class="sr-only"></label><button class="text-button" data-predictor-hide>Hide tool ↑</button></div></div><p class="predictor-draft-note">Picks save in this browser. Export / import a prediction to move it between localhost and GitHub.</p>${storageWarning?`<p class="storage-warning" role="status">${esc(storageWarning)}</p>`:''}<nav class="predictor-steps" aria-label="Prediction steps">${[...GROUPS.map(g=>g.name),'Seed the bracket','Pick the winners'].map((label,i)=>`<button data-predictor-step="${i}" ${!canVisit(i)?'disabled':''} ${i===step?'aria-current="step"':''}><span>${i+1}</span>${label}</button>`).join('')}</nav><div id="predictor-step-content">${step<5?conferenceEditor():`<div class="predictor-step-heading"><div><p class="eyebrow">${step===5?'BUILD THE FIELD':'FINISH THE BRACKET'}</p><h2>${step===5?'Seed your 12 teams':'Pick your national champion'}</h2><p>${step===5?'Choose teams beside each seed. Seeds 1–4 receive byes; champions can occupy any seed.':'Click a team to advance it. Changing a pick clears any later picks that no longer fit.'}</p></div>${step===6?`<strong class="predictor-game-count">${Object.keys(state.winners).length} / 11 games picked</strong>`:''}</div>${step===5?`<div class="predictor-qualifiers" aria-label="Required automatic qualifiers">${GROUPS.map(g=>{const id=state.groups[g.id].champion,inField=state.seeds.includes(id);return `<span class="${inField?'included':''}">${logo(id)}<span>${esc(map.get(id)?.name)}<small>${esc(g.name)} · ${inField?'included ✓':'required'}</small></span></span>`;}).join('')}</div><p class="predictor-group-note">All 138 teams are available for at-large picks, including independents. A team can fill only one seed.</p>`:''}${bracketEditor(step===6)}`}</div><div class="predictor-step-footer"><button class="button" data-predictor-prev ${step===0?'disabled':''}>← Back</button><p id="predictor-validation" role="status">${step<5?ready()?'Contenders and qualifier selected.':'Select at least one contender and your projected winner.':step===5?errors.join(' '):complete(state)?'Your presentation is ready.':`Pick all 11 games to create your presentation.`}</p><button class="button primary" data-predictor-next ${!ready()?'disabled':''}>${step===6?'Create presentation →':step===4?'Seed the bracket →':step===5?'Predict the games →':'Next conference →'}</button></div></section>`;
+      const scroller=workspace.querySelector('.predictor-bracket-scroll');if(scroller)scroller.scrollLeft=scrollLeft;
+      if(focus){const node=workspace.querySelector(focus);node?.focus({preventScroll:true});}
+    }
+    function download(blob,name){const url=win.URL.createObjectURL(blob),a=doc.createElement('a');a.href=url;a.download=name;doc.body.append(a);a.click();a.remove();win.setTimeout(()=>win.URL.revokeObjectURL(url),10000);}
+    function message(text){d('#predictor-message').textContent=text;d('#predictor-message').hidden=!text;}
+    function renderSlide(){
+      d('#predictor-slide').innerHTML=graphic(session,index);d('#predictor-counter').textContent=`${index+1} / ${session.slides.length} · ${session.slides[index].title}`;
+      d('#predictor-progress').max=session.slides.length;d('#predictor-progress').value=index+1;d('#predictor-prev').disabled=index===0;d('#predictor-next').disabled=index===session.slides.length-1;
+    }
+    function go(next){if(!session)return;index=Math.max(0,Math.min(session.slides.length-1,next));message('');renderSlide();}
+    function start(button){if(dialog.open||!complete(state))return;session=capture(state,teams,season);index=0;run++;assets=null;opener=button||doc.activeElement;message('');renderSlide();doc.documentElement.classList.add('presenting');dialog.showModal();d('#predictor-slide').focus();}
+    const shell=d('.predictor-shell');
+    function cleanup(){if(!session)return;session=null;run++;exporting=false;dialog.querySelectorAll('[data-predictor-export]').forEach(b=>b.disabled=false);doc.documentElement.classList.remove('presenting');if(doc.fullscreenElement===shell)doc.exitFullscreen?.().catch(()=>{});opener?.focus({preventScroll:true});}
+    function close(){dialog.close();cleanup();}
+    async function fullscreen(){
+      if(fullscreenPending||!session)return;fullscreenPending=true;d('#predictor-fullscreen').disabled=true;const current=run;
+      try{if(doc.fullscreenElement===shell)await doc.exitFullscreen();else{await shell.requestFullscreen();if((!session||current!==run)&&doc.fullscreenElement===shell)await doc.exitFullscreen();}}
+      catch{if(session&&current===run)message('Full screen is unavailable here. You can still use the presentation.');}
+      finally{fullscreenPending=false;d('#predictor-fullscreen').disabled=false;}
+    }
+    async function embedLogos(snapshot){
+      const ids=new Set([...snapshot.state.seeds,...Object.values(snapshot.state.groups).flatMap(g=>g.contenders)]);
+      return new Map(await Promise.all([...ids].map(async id=>{
+        const src=map.get(id).logo;if(src.startsWith('data:image/'))return [id,src];
+        try{const response=await win.fetch(src,{credentials:'omit',referrerPolicy:'no-referrer'});if(!response.ok)throw Error('Logo missing');const blob=await response.blob();const data=await new Promise((resolve,reject)=>{const reader=new win.FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=reject;reader.readAsDataURL(blob);});return [id,data];}catch{return [id,null];}
+      })));
+    }
+    async function exportSlide(format){
+      if(exporting||!session||!['png','svg'].includes(format))return;exporting=true;const current=run,snapshot=session,position=index;dialog.querySelectorAll('[data-predictor-export]').forEach(b=>b.disabled=true);message('Preparing your slide…');
+      try{
+        assets ||= embedLogos(snapshot);const logos=await assets,svg=graphic(snapshot,position,logos);let blob=new win.Blob([svg],{type:'image/svg+xml;charset=utf-8'});
+        if(format==='png'){const img=new win.Image();await new Promise((resolve,reject)=>{img.onload=resolve;img.onerror=reject;img.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);});const canvas=doc.createElement('canvas');canvas.width=1920;canvas.height=1080;const ctx=canvas.getContext('2d');if(!ctx)throw Error('Canvas unavailable');ctx.drawImage(img,0,0);blob=await new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(Error('Conversion failed')),'image/png'));}
+        if(run!==current||!dialog.open)return;download(blob,`backfield-playoff-${snapshot.season}-slide-${String(position+1).padStart(2,'0')}.${format}`);message(`Slide download started.${[...logos.values()].some(v=>!v)?' Unavailable logos use team abbreviations.':''}`);
+      }catch{if(run===current)message('The slide could not be downloaded in this format. Try Download SVG.');}
+      finally{if(run===current){exporting=false;dialog.querySelectorAll('[data-predictor-export]').forEach(b=>b.disabled=false);}}
+    }
+    host.addEventListener('click',event=>{
+      const b=event.target.closest('button');if(!b||b.disabled)return;
+      if(b.hasAttribute('data-open-predictor')){opened=true;render();$('#predictor-workspace')?.scrollIntoView?.({behavior:'smooth',block:'start'});$('#predictor-conference-champion')?.focus({preventScroll:true});}
+      if(b.hasAttribute('data-predictor-hide')){opened=false;render();$('[data-open-predictor]')?.focus();}
+      if(b.dataset.predictorStep!==undefined){const next=Number(b.dataset.predictorStep);if(canVisit(next)){step=next;render(`[data-predictor-step="${step}"]`);}}
+      if(b.hasAttribute('data-predictor-prev')){step=Math.max(0,step-1);render(`[data-predictor-step="${step}"]`);}
+      if(b.hasAttribute('data-predictor-next')&&ready()){if(step<6){step++;render(`[data-predictor-step="${step}"]`);}else start(b);}
+      if(b.dataset.predictorGame){const game=GAMES.find(g=>g.id===b.dataset.predictorGame),id=b.dataset.predictorWinner;if(game&&fieldErrors(state).length===0&&participants(state,game).every(Boolean)&&participants(state,game).includes(id)){state.winners[game.id]=id;trimWinners(state);save();render(`[data-predictor-game="${game.id}"][data-predictor-winner="${id}"]`);}}
+      if(b.hasAttribute('data-predictor-backup')){download(new win.Blob([JSON.stringify({type:'backfield-playoff-prediction',season,state},null,2)],{type:'application/json'}),`backfield-playoff-prediction-${season}.json`);notify('Prediction download started.');}
+    });
+    host.addEventListener('change',async event=>{
+      const input=event.target;
+      if(input.dataset.predictorContender&&step<5){const id=input.dataset.predictorContender,group=GROUPS[step],entry=state.groups[group.id];if(!group.conferences.includes(map.get(id)?.conference))return;entry.contenders=input.checked?[...new Set([...entry.contenders,id])]:entry.contenders.filter(t=>t!==id);if(!entry.contenders.includes(entry.champion))entry.champion=null;save();render(`[data-predictor-contender="${id}"]`);}
+      if(input.id==='predictor-conference-champion'&&step<5){const entry=state.groups[GROUPS[step].id];entry.champion=entry.contenders.includes(input.value)?input.value:null;save();render('#predictor-conference-champion');}
+      if(input.dataset.predictorSeed){const seed=Number(input.dataset.predictorSeed),id=input.value||null;if(!Number.isInteger(seed)||seed<1||seed>12||id&&(!map.has(id)||state.seeds.some((t,i)=>t===id&&i!==seed-1)))return;state.seeds[seed-1]=id;trimWinners(state);save();render(`[data-predictor-seed="${seed}"]`);}
+      if(input.id==='predictor-import'){
+        const file=input.files?.[0];if(!file)return;const originalState=JSON.stringify(state);
+        try{if(file.size>100000)throw Error('Prediction file is too large.');const raw=JSON.parse(await file.text());if(raw?.type!=='backfield-playoff-prediction'||raw.season!==season||raw.state?.version!==1)throw Error('Choose an exported prediction for this season.');if(JSON.stringify(state)!==originalState)throw Error('Your picks changed while importing. Try the import again.');state=clean(raw.state,teams);step=0;save();render();notify('Prediction imported.');}catch(error){notify(error.message||'Could not import prediction.');}
+      }
+    });
+    d('#predictor-prev').addEventListener('click',()=>go(index-1));d('#predictor-next').addEventListener('click',()=>go(index+1));d('#predictor-close').addEventListener('click',close);
+    d('#predictor-fullscreen').hidden=!shell.requestFullscreen;d('#predictor-fullscreen').addEventListener('click',fullscreen);
+    dialog.addEventListener('click',event=>{const button=event.target.closest('[data-predictor-export]');if(button)exportSlide(button.dataset.predictorExport);else if(event.target.closest('#predictor-slide'))go(index+1);});
+    dialog.addEventListener('keydown',event=>{
+      if(!session||event.altKey||event.ctrlKey||event.metaKey||event.target.closest('input,select,textarea'))return;
+      if(event.key==='Escape'){event.preventDefault();if(doc.fullscreenElement===shell)doc.exitFullscreen().catch(()=>{});else close();return;}
+      const position={ArrowRight:index+1,PageDown:index+1,ArrowLeft:index-1,PageUp:index-1,Home:0,End:session.slides.length-1}[event.key];
+      if(position!==undefined||(event.key===' '&&!event.target.closest('button'))){event.preventDefault();go(position??index+1);}
+    });
+    dialog.addEventListener('cancel',event=>{event.preventDefault();if(doc.fullscreenElement===shell)doc.exitFullscreen().catch(()=>{});else close();});dialog.addEventListener('close',cleanup);
+    doc.addEventListener('fullscreenchange',()=>{d('#predictor-fullscreen').textContent=doc.fullscreenElement===shell?'Exit full screen':'Full screen';if(session)d('#predictor-slide').focus({preventScroll:true});});
+    return {mount:()=>render()};
+  }
+  return {KEY,GROUPS,GAMES,initial,clean,participants,trimWinners,qualifiers,fieldErrors,complete,capture,graphic,create};
+});
+</script>
 <script>/* No runtime dependencies: this app also runs directly from index.html. */
 (() => {
   'use strict';
@@ -573,6 +826,7 @@ html.presenting{overflow:hidden}
   const stamp=date=>date?`${fmtDate(date)} at ${fmtTime(date)}`:'Not downloaded';
   const schedule=id=>M.mergeFeeds([D.schedules[id],cache.schedules[id]]);
   const presentation=window.CFBPresentation.create({dialog:$('#presentation-dialog'),getDefaultTeams:()=>state.strengthOrder.slice(0,3),getSession:options=>window.CFBPresentation.capture({state,teams:D.teams,schedule,boards:[D.scoreboard,...Object.values(cache.boards)],week:M.weekAt(D.calendar),...options})});
+  const predictor=window.CFBPlayoff.create({host:$('#view-content'),dialog:$('#predictor-dialog'),teams:D.teams,season:D.season,notify});
   function derivedBoard(week,type){const merged=M.mergeFeeds([...D.teams.map(t=>schedule(t.id)),D.scoreboard,cache.boards[`${type}-${week}`]]);return {...merged,week,seasonType:type,events:merged.events.filter(e=>String(e.seasonType)===type&&(type==='3'||String(e.week)===String(week)))};}
   const board=()=>derivedBoard(scoreWeek,scoreSeasonType);
   const mode=()=>view==='playoff'?'playoff':'strength';
@@ -596,7 +850,8 @@ html.presenting{overflow:hidden}
     $('#snap-count').textContent=state.snapshots.length;
     $('#snapshot').hidden=!['strength','playoff'].includes(view);
     document.querySelectorAll('[data-view]').forEach(el=>el.classList.toggle('active',el.dataset.view===view));
-    const copy={strength:['Power rankings','Drag teams or click a rank to change the order.'],playoff:['Playoff eliminator','Rank playoff chances. Eliminate teams with × or drag them to Eliminated.'],scores:['Scores & schedule',''],history:['Ranking history','']}[view];
+    $('.summary-strip').hidden=view==='videos';
+    const copy={strength:['Power rankings','Drag teams or click a rank to change the order.'],playoff:['Playoff eliminator','Rank playoff chances. Eliminate teams with × or drag them to Eliminated.'],scores:['Scores & schedule',''],history:['Ranking history',''],videos:['Video Tools','Build your picks. Present the reveal.']}[view];
     $('#page-title').textContent=copy[0];$('#page-description').textContent=copy[1];$('#page-description').hidden=!copy[1];
     const isBoard=['strength','playoff'].includes(view),dirty=isBoard&&hasUnsaved(mode());
     $('#ranking-save-status').hidden=!isBoard;
@@ -619,7 +874,8 @@ html.presenting{overflow:hidden}
   function weekOptions(){return calendar.map(w=>`<option value="${esc(w.value)}" ${w.value===scoreWeek?'selected':''}>${esc(w.label)} · ${esc(w.detail)}</option>`).join('');}
   function renderScores(){const b=board(),games=(b?.events||[]).filter(e=>scoreConference==='all'||e.competitors.some(c=>teamMap.get(c.id)?.conference===scoreConference)).slice().sort((a,b)=>Date.parse(a.date)-Date.parse(b.date));return `<div class="scores-toolbar"><div class="toolbar-group"><select id="score-season-type" aria-label="Season stage"><option value="2" ${scoreSeasonType==='2'?'selected':''}>Regular season</option><option value="3" ${scoreSeasonType==='3'?'selected':''}>Postseason</option></select>${scoreSeasonType==='2'?`<select id="score-week" aria-label="Game week">${weekOptions()}</select>`:''}<select id="score-conference" aria-label="Score conference">${conferenceOptions(scoreConference)}</select></div><div class="toolbar-group"><button class="button small" id="download-schedules" ${downloading?'disabled':''}>${downloading?'Downloading…':'↓ Download all schedules'}</button><button class="button small" id="refresh-scores" ${loadingScore?'disabled':''}>${loadingScore?'Refreshing…':'↻ Refresh'}</button></div></div><div class="data-time" style="margin-bottom:18px">${b?`Last downloaded ${stamp(b.updatedAt)} · ${games.length} games`:'No cached scores for this week.'} ${feedError?'· Feed unavailable. Showing saved data.':feedSuccess?'· Connected to ESPN.':'· Saved data; refresh for the latest.'} · Times shown in ${esc(Intl.DateTimeFormat().resolvedOptions().timeZone)}.</div><div id="download-progress" class="download-progress" role="status"></div><div class="score-grid">${games.map(e=>`<article class="score-card"><div class="game-status">${gameStatus(e)}<span>${esc(e.broadcast)}</span></div>${gameTeams(e,true)}<div class="game-meta">${esc(e.venue||'Venue to be announced')}${e.neutral?' · Neutral site':''}</div></article>`).join('')||`<div class="empty"><strong>${b?'No games in this view.':'This week has not been downloaded.'}</strong>${b?'Try another conference or week. Postseason matchups appear once announced.':'Connect to the internet and choose Refresh. All team schedules are still available by clicking a team.'}</div>`}</div>`;}
   function renderHistory(){return `<p class="history-intro">History begins with your first Save ranking on each board. The alphabetical starting order never counts. After your first save, later weeks keep an automatic snapshot when you use the app. Open a team to compare its power ranking and playoff outlook over time.</p><div class="history-team-search"><label for="history-team">Explore a team</label><select id="history-team"><option value="">Choose a team…</option>${D.teams.map(t=>`<option value="${t.id}">${esc(t.name)}</option>`).join('')}</select></div><div class="history-list">${state.snapshots.slice().sort((a,b)=>Date.parse(b.date)-Date.parse(a.date)).map(s=>`<article class="history-card"><div class="history-icon" aria-hidden="true">↗</div><div><h3>Week ${esc(s.week)} · ${s.mode==='strength'?'Power rankings':'Playoff hopes'}</h3><p>${stamp(s.date)} · ${s.order.filter(id=>!s.excluded.includes(id)).length} ranked teams</p></div><span class="badge">${s.kind==='auto'?'Weekly autosave':'Saved ranking'}</span><button class="button small" data-open-snapshot="${esc(s.id)}">View</button><button class="icon-btn" data-delete-snapshot="${esc(s.id)}" aria-label="Delete Week ${esc(s.week)} ${s.mode} ranking">×</button></article>`).join('')||'<div class="panel empty"><strong>No saved rankings</strong>Select Save ranking on a board to start its history.</div>'}</div>`;}
-  function render(){summary();$('#view-content').innerHTML=(storageProblem?`<div class="storage-warning">${esc(storageProblem)}</div>`:'')+(view==='scores'?renderScores():view==='history'?renderHistory():renderBoard());}
+  function renderVideos(){return `<div class="video-tools"><article class="video-tool-card video-top25"><span class="video-tool-number">25</span><div><p class="eyebrow">RANKING COUNTDOWN</p><h2>Top 25 rankings</h2><p>Your power rankings, team stories, and a complete countdown graphic.</p><button class="button" data-presentation>Present Top 25 →</button></div></article><article class="video-tool-card video-playoff"><span class="video-tool-number">12</span><div><p class="eyebrow">ROAD TO THE TITLE</p><h2>Playoff predictor</h2><p>Conference contenders, a 12-team field, and your national champion.</p><button class="button primary" data-open-predictor>Build playoff prediction →</button></div></article></div><div id="predictor-workspace"></div>`;}
+  function render(){summary();$('#view-content').innerHTML=(storageProblem?`<div class="storage-warning">${esc(storageProblem)}</div>`:'')+(view==='videos'?renderVideos():view==='scores'?renderScores():view==='history'?renderHistory():renderBoard());if(view==='videos')predictor.mount();}
   const hasUnsaved=boardMode=>M.hasUnsavedRanking(state,boardMode,initialIds);
   function weekSelect(selected=currentWeek){return calendar.map(w=>`<option value="${esc(w.value)}" ${w.value===selected?'selected':''}>${esc(w.label)}</option>`).join('')+`<option value="Postseason" ${selected==='Postseason'?'selected':''}>Postseason</option>`;}
   function commitRanking(boardMode,week){try{M.saveManual(state,boardMode,week);}catch(error){$('#action-error').hidden=false;$('#action-error').textContent=error.message;$('#leave-note').textContent=error.message;notify(error.message);return false;}const stored=persist();if(!stored)exportBackup();render();notify(stored?'Ranking saved. Export a backup to keep a separate file.':'Browser save unavailable. A backup download has been started.');return true;}

@@ -21,7 +21,7 @@ Backfield Football branding uses a black-and-gold default theme and an optional 
 
 ## Top 25 presentation
 
-Select **Present Top 25**, choose **three different teams** for the opening thumbnail, then **Start presentation**. The selectors include all 138 teams and remember your choices in this browser. A live preview shows the left, upper-right and lower-right logos over a stadium background. The first slide can be downloaded as a **1920 × 1080 PNG** or SVG from the toolbar.
+Open **Video Tools → Present Top 25**, choose **three different teams** for the opening thumbnail, then **Start presentation**. The selectors include all 138 teams and remember your choices in this browser. A live preview shows the left, upper-right and lower-right logos over a stadium background. The first slide can be downloaded as a **1920 × 1080 PNG** or SVG from the toolbar.
 
 After the opening thumbnail, count down from **No. 25 to No. 1 using your own current national power rankings**. Conference filters, search results and playoff-hopes order do not change the presentation. Each team slide includes its season record, full schedule, latest completed game and saved power ranking history. The final slide creates a Top 25 graphic with all teams, records and ranking movement.
 
@@ -32,6 +32,23 @@ Use **Previous / Next**, arrow keys, Page Up / Page Down, or Space on the slide.
 The presentation freezes the current board and available score data when started. It does not create history, save the board, or discard draft edits. Ranking graphs show up to 12 recent saved power rankings and a separate current-board point; no history is invented for an unsaved team. Movement compares with its latest eligible save, excluding the current week's automatic snapshot. Refresh scores or download schedules before presenting for newer results.
 
 Presentations work offline. The portable `publish/index.html` embeds logos for offline graphic downloads. When opening the source `index.html` directly, some browsers block reading local logos for export; the downloaded graphic uses team abbreviations for unavailable logos. Localhost and the hosted version embed the downloaded logos normally.
+
+## Playoff predictor presentation
+
+Open **Video Tools → Build playoff prediction**. Choose contenders and a projected champion for the ACC, Big Ten, Big 12 and SEC. The **Group of 6** combines the American, Conference USA, MAC, Mountain West, Pac-12 and Sun Belt into one contender pool with one projected automatic qualifier.
+
+Place twelve different teams using the dropdown beside each seed on the bracket. All 138 teams, including independents, are available; chosen teams disappear from the other dropdowns. All four projected conference champions and the Group of 6 qualifier must appear before **Predict the games** becomes available. The top four seeds receive byes; champions are not restricted to those seeds. First-round matchups are 8–9, 5–12, 6–11 and 7–10, feeding seeds 1, 4, 3 and 2 respectively.
+
+Click the winning team in each of the eleven games. A later matchup becomes selectable once both teams are known. Changing a seed or result removes subsequent picks that no longer fit. Once a champion is selected, **Create presentation** opens a 35-slide deck:
+
+1. A teal-and-ivory playoff thumbnail showing the projected field, distinct from the Top 25 stadium thumbnail.
+2. Two slides per conference group: the selected contenders' logos, followed by the same lineup with the projected winner circled.
+3. A blank bracket, then each of the five automatic qualifiers in its assigned seed, followed by each remaining team from highest to lowest seed.
+4. One game result per slide through the first round, quarterfinals, semifinals and championship. The completed bracket and national champion are the final slide.
+
+Click the slide or use **Next**, arrow keys, Page Up / Page Down, or Space to reveal the next pick. **Home** returns to the thumbnail; **End** goes to the completed bracket. **Full screen** hides the controls; Escape restores them on the same slide. Each slide downloads as a **1920 × 1080 PNG** or self-contained **SVG**. On narrow screens the editable bracket scrolls horizontally; presentation slides fit the screen.
+
+Predictions save separately from ranking boards in this browser. Use **Export prediction / Import prediction** inside the tool to move a prediction between localhost and GitHub Pages. Ranking backup files do not include predictions. These are personal projections: the tool enforces the five requested qualifying picks and bracket structure, rather than calculating official committee rankings or postseason eligibility.
 
 ## Ranking history and saving
 
@@ -76,11 +93,9 @@ npm run refresh-data
 npm run build
 ```
 
-The complete source can be committed to the supplied repository's `main` branch. In **Settings → Pages → Build and deployment**, choose **GitHub Actions**. The included `.github/workflows/pages.yml` tests the source, builds `dist/`, and publishes it. GitHub write access is needed to upload code; repository settings access is needed to enable Pages.
+The editable local source and GitHub distribution have separate histories. Publish only the six files from `publish/` (`index.html`, `sw.js`, `manifest.webmanifest`, `favicon.png`, `README.md` and `.nojekyll`) onto the existing GitHub `main` history. Never replace it with the local source history or force-push it. Pages uses **Deploy from a branch → main → / (root)**. The compact distribution embeds all logos, data, styles, and scripts in `index.html`, with a small separate service worker for offline web access. It can also be opened offline as a single HTML file.
 
-Alternatively, upload the contents of the generated `publish/` directory to the repository root and select **Deploy from a branch → main → / (root)** in Pages settings. This compact distribution embeds all logos, data, styles, and scripts in `index.html`, with a small separate service worker for offline web access. It can also be opened offline as a single HTML file.
-
-Expected URL once GitHub confirms deployment: `https://schaafconnor0-collab.github.io/CollegeFootballEliminator/`. A prepared repository is not evidence that the site has been published.
+Live URL: [College Football Eliminator](https://schaafconnor0-collab.github.io/CollegeFootballEliminator/). Verify that Pages finishes deploying and the live files match the build after each publication.
 
 ## Privacy and publication safeguards
 
@@ -93,6 +108,7 @@ Public commits also carry author metadata. Use GitHub's private-email setting fo
 ## Sources and ownership
 
 - [ESPN teams](https://www.espn.com/college-football/teams): current team IDs, names, and logos.
+- [2026–27 College Football Playoff format](https://collegefootballplayoff.com/sports/2024/5/29/12-team-format): automatic qualifiers, seeding, byes and bracket paths.
 - [Pac-12 2026 football schedule](https://pac-12.com/news/2026/2/9/general-the-new-pac-12-announces-its-2026-football-schedule.aspx).
 - [NDSU FBS FAQ](https://gobison.com/sports/2026/2/9/fbs-frequently-asked-questions): 2026 Mountain West membership.
 - [Sacramento State joins the MAC](https://hornetsports.com/news/2026/2/16/hornet-football-to-join-the-mac-in-2026.aspx).
