@@ -21,11 +21,13 @@ Backfield Football branding uses a black-and-gold default theme and an optional 
 
 ## Top 25 presentation
 
-Select **Present Top 25**, then **Start presentation** to count down from **No. 25 to No. 1 using your own current national power rankings**. Conference filters, search results and playoff-hopes order do not change the presentation. Each team slide includes its season record, full schedule, latest completed game and saved power ranking history. The final slide creates a Top 25 graphic with all teams, records and ranking movement.
+Select **Present Top 25**, choose **three different teams** for the opening thumbnail, then **Start presentation**. The selectors include all 138 teams and remember your choices in this browser. A live preview shows the left, upper-right and lower-right logos over a stadium background. The first slide can be downloaded as a **1920 × 1080 PNG** or SVG from the toolbar.
 
-Before starting, optionally enable **Include a “Just missed out” slide**. Choose an ending rank from **27 through 35**: the graphic includes every team from **26** to that rank (2–10 teams). It appears before No. 25 and has its own download buttons. Leave the option off to start directly at No. 25.
+After the opening thumbnail, count down from **No. 25 to No. 1 using your own current national power rankings**. Conference filters, search results and playoff-hopes order do not change the presentation. Each team slide includes its season record, full schedule, latest completed game and saved power ranking history. The final slide creates a Top 25 graphic with all teams, records and ranking movement.
 
-Use **Previous / Next**, arrow keys, Page Up / Page Down, or Space on the slide. **Home** restarts the reveal, **End** opens the final graphic, and **Esc / Close** exits. **Full screen** is available in supporting browsers. Both graphics can be downloaded as **1600 × 1000 PNG** images or scalable **SVG** files. On smaller screens, scroll the graphic horizontally to read every team.
+Before starting, optionally enable **Include a “Just missed out” slide**. Choose an ending rank from **27 through 35**: the graphic includes every team from **26** to that rank (2–10 teams). It appears after the opening thumbnail and before No. 25 and has its own download buttons.
+
+Use **Previous / Next**, arrow keys, Page Up / Page Down, or Space on the slide. **Home** returns to the opening thumbnail, **End** opens the final graphic, and **Esc / Close** exits. **Full screen** is available in supporting browsers and hides the controls. The Top 25 and Just missed out graphics retain their **1600 × 1000 PNG** or scalable **SVG** downloads. On smaller screens, scroll those ranking graphics horizontally to read every team; the thumbnail fits the screen at 16:9.
 
 The presentation freezes the current board and available score data when started. It does not create history, save the board, or discard draft edits. Ranking graphs show up to 12 recent saved power rankings and a separate current-board point; no history is invented for an unsaved team. Movement compares with its latest eligible save, excluding the current week's automatic snapshot. Refresh scores or download schedules before presenting for newer results.
 
@@ -54,7 +56,7 @@ The scoreboard refreshes every **60 seconds while the page is visible and online
 
 Scores **cannot update without internet**. The interface shows download timestamps and keeps previous data when a request fails. The live adapter uses ESPN's public JSON feed, which currently returns `Access-Control-Allow-Origin: *`; this was verified for the target GitHub Pages origin on September 6, 2026 (Central time). It is an unofficial, unsupported feed and can change or become unavailable. No reliability or availability guarantee is implied. There is no proxy server, paid subscription, or secret API key.
 
-Requests use the calendar's **explicit date ranges** because week-only requests can return just a limited selection of games. Cached full-season schedules allow every week to be browsed offline. Times use the device's timezone. Postseason and unresolved opponents only appear once announced by the source.
+Requests use the calendar's **explicit date ranges**, including the exclusive end date, so the final day of each week is included. Week-only requests can return just a limited selection of games. Scoreboards merge refreshed results with known schedules and cached games, using the newest available copy of each game. An incomplete refresh cannot hide a known matchup. Cached full-season schedules allow every week to be browsed offline. Times use the device's timezone. Postseason and unresolved opponents only appear once announced by the source.
 
 ## Development and publishing
 
