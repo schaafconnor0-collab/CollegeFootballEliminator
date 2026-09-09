@@ -18,6 +18,15 @@ Backfield Football branding uses a black-and-gold default theme and an optional 
 - Conference rankings are filtered views of the **same national power ranking**. Moving the 14th Big Ten team above the 13th places it immediately ahead of that team nationally. National changes also change conference order.
 - The playoff eliminator has an **independent order of playoff hopes**, initially copied from the alphabetical power board. Every team still displays its power rank. Use **Use power order** to copy your current power order into the eliminator.
 - Click × or drop a team in the eliminated section to eliminate it. Restore it with ↶. This never removes a team from power rankings. Elimination is your opinion; the app does not automatically judge postseason eligibility or decide who qualifies.
+- Choose a week on the eliminator board, then mark active teams **Safe** or **Hanging by a thread**, or eliminate them. Status changes carry into later weeks until another change. Earlier weeks keep their own status; restoring a team records a safe status for the selected week. Existing eliminations from older backups remain undated until you assign their week.
+
+## Eliminator video
+
+Open **Video Tools → Open eliminator video**. Select **YouTube (1920 × 1080)** or **YouTube Shorts (1080 × 1920)**, choose the week, and start the presentation. Both layouts use team logos without printed team names, ranks or records.
+
+The opening stadium thumbnail automatically features the three highest teams in your current power ranking among those eliminated by the selected week. It uses fewer logos when fewer than three teams have been eliminated. The presentation then shows newly eliminated teams for that week, all other eliminated teams, teams hanging by a thread, and safe teams by conference. The **Group of 6** combines the American, Conference USA, MAC, Mountain West, Pac-12 and Sun Belt; independents have their own group. Empty sections are skipped and large groups continue onto additional slides.
+
+Use the arrow keys, Previous / Next, or click the slide to advance. **Home** returns to the thumbnail and **End** opens the last slide. **Full screen** hides the controls for recording; Escape restores them on the same slide. Download any slide as a **PNG** at the selected dimensions or as a self-contained **SVG**. The presentation captures your status and power rankings when you start, without changing either board. Weekly status history is included in the normal ranking backup.
 
 ## Top 25 presentation
 
