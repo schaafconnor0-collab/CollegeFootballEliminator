@@ -30,7 +30,11 @@ Use the arrow keys, Previous / Next, or click the slide to advance. **Home** ret
 
 ## Top 25 presentation
 
-Open **Video Tools → Present Top 25**, choose **three different teams** for the opening thumbnail, then **Start presentation**. The selectors include all 138 teams and remember your choices in this browser. A live preview shows the left, upper-right and lower-right logos over a stadium background. The first slide can be downloaded as a **1920 × 1080 PNG** or SVG from the toolbar.
+Open **Video Tools → Present Top 25** and choose **YouTube** or **YouTube Shorts** before starting.
+
+**YouTube Shorts (1080 × 1920)** shows one fixed board of all 25 rank positions, with logos revealed in five cumulative groups: **25–21, 20–16, 15–11, 10–6, and 5–1**. Earlier reveals stay visible. There are exactly five slides, with only rank numbers and team logos on the board. Each slide downloads as a portrait PNG or self-contained SVG. Home returns to the first five-team reveal; End shows all 25 teams.
+
+For **YouTube**, choose **three different teams** for the opening thumbnail, then **Start presentation**. The selectors include all 138 teams and remember your choices in this browser. A live preview shows the left, upper-right and lower-right logos over a stadium background. The first slide can be downloaded as a **1920 × 1080 PNG** or SVG from the toolbar.
 
 After the opening thumbnail, count down from **No. 25 to No. 1 using your own current national power rankings**. Conference filters, search results and playoff-hopes order do not change the presentation. Each team slide includes its season record, full schedule, latest completed game and saved power ranking history. The final slide creates a Top 25 graphic with all teams, records and ranking movement.
 
@@ -44,11 +48,13 @@ Presentations work offline. The portable `publish/index.html` embeds logos for o
 
 ## Playoff predictor presentation
 
-Open **Video Tools → Open playoff predictor**. Choose contenders and a projected champion for the ACC, Big Ten, Big 12 and SEC. The **Group of 6** combines the American, Conference USA, MAC, Mountain West, Pac-12 and Sun Belt into one contender pool with one projected automatic qualifier.
+Open **Video Tools → Open playoff predictor** and choose **YouTube** or **YouTube Shorts**. Choose contenders and a projected champion for the ACC, Big Ten, Big 12 and SEC. The **Group of 6** combines the American, Conference USA, MAC, Mountain West, Pac-12 and Sun Belt into one contender pool with one projected automatic qualifier.
+
+**YouTube Shorts (1080 × 1920)** finishes setup after the twelve seeds are assigned; game-winner picks are not required. Its 13-slide portrait presentation goes directly to a blank bracket, reveals the five automatic qualifiers first, then the seven at-large teams in seed order, and ends with the complete field. Team slots show logos and seed numbers. It has no thumbnail, conference slides or game-result predictions. Each slide downloads as a portrait PNG or self-contained SVG. Switching formats preserves existing prediction picks.
 
 Place twelve different teams using the dropdown beside each seed on the bracket. All 138 teams, including independents, are available; chosen teams disappear from the other dropdowns. All four projected conference champions and the Group of 6 qualifier must appear before **Predict the games** becomes available. The top four seeds receive byes; champions are not restricted to those seeds. First-round matchups are 8–9, 5–12, 6–11 and 7–10, feeding seeds 1, 4, 3 and 2 respectively.
 
-Click the winning team in each of the eleven games. A later matchup becomes selectable once both teams are known. Changing a seed or result removes subsequent picks that no longer fit. Once a champion is selected, **Create presentation** opens a 35-slide deck:
+For **YouTube**, click the winning team in each of the eleven games. A later matchup becomes selectable once both teams are known. Changing a seed or result removes subsequent picks that no longer fit. Once a champion is selected, **Create presentation** opens a 35-slide deck:
 
 1. A gold-and-charcoal title thumbnail with an obscured, anonymous bracket. It contains no selected teams, seeds, logos or results, including in its exported SVG.
 2. Two slides per conference group: the selected contenders' logos, followed by the same lineup with the projected winner circled.
