@@ -20,6 +20,16 @@ Backfield Football branding uses a black-and-gold default theme and an optional 
 - Click × or drop a team in the eliminated section to eliminate it. Restore it with ↶. This never removes a team from power rankings. Elimination is your opinion; the app does not automatically judge postseason eligibility or decide who qualifies.
 - Choose a week on the eliminator board, then mark active teams **Safe** or **Hanging by a thread**, or eliminate them. Status changes carry into later weeks until another change. Earlier weeks keep their own status; restoring a team records a safe status for the selected week. Existing eliminations from older backups remain undated until you assign their week.
 
+## Weekly prediction video
+
+Open **Video Tools → Open weekly predictions**, choose a week, and select **1–10 games** from the searchable schedule sheet. All known games in the chosen week are listed, including FCS opponents. The sheet combines bundled schedules with cached and refreshed games, so it remains usable offline. Available spreads fill in from the live feed; edit the home team's signed line before presenting (negative means the home team is favored, positive means it is the underdog, and zero means pick'em). Missing lines remain blank and can be entered manually.
+
+The **1920 × 1080** presentation begins with a thumbnail containing the four strongest selected matchups, shown as paired team logos over a separate stock field photograph. Its only printed text is the week and **College Football Predictions**. Selecting fewer than four games produces fewer pairs. The deck then shows one slide per game, from the weakest average power ranking to the strongest. Both ordering and thumbnail selection use your current national power rankings, with unranked opponents placed below the ranked teams for sorting.
+
+Click either team under **Winner** and independently under **Against the spread** to reveal your picks. Click a selected result again to clear it. A missing line leaves spread picks unavailable until you enter one in setup. Arrow keys move between slides; **F** opens fullscreen for recording and **Escape** restores the controls on the same slide. **Home / End** jump to the thumbnail / final game. Download any slide and its current picks as **PNG** or self-contained **SVG**.
+
+Selections, manual lines, and picks are saved separately for each week in this browser. They do not change your rankings or ranking history and are not included in ranking backups. The presentation freezes the selected games, ranks, and lines when started; return to setup to change them.
+
 ## Eliminator video
 
 Open **Video Tools → Open eliminator video**. Select **YouTube (1920 × 1080)** or **YouTube Shorts (1080 × 1920)**, choose the week, and start the presentation. Both layouts use team logos without printed team names, ranks or records.
@@ -121,6 +131,8 @@ The local server binds only to the loopback interface and serves an explicit lis
 Public commits also carry author metadata. Use GitHub's private-email setting for browser commits and a no-reply email for command-line commits. A clean website package alone does not make old Git history private.
 
 ## Sources and ownership
+
+- Weekly prediction background: [American football goalpost by Chris F on Pexels](https://www.pexels.com/photo/american-football-goalpost-20400831/), used under the [Pexels license](https://www.pexels.com/license/). The downloaded image is embedded in the portable website and slide exports; viewing slides does not contact Pexels.
 
 - [ESPN teams](https://www.espn.com/college-football/teams): current team IDs, names, and logos.
 - [2026–27 College Football Playoff format](https://collegefootballplayoff.com/sports/2024/5/29/12-team-format): automatic qualifiers, seeding, byes and bracket paths.
