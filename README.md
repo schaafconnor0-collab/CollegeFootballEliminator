@@ -16,10 +16,11 @@ Backfield Football branding uses a black-and-gold default theme and an optional 
 
 - Drag a team before another, use the up/down buttons, or click its rank to enter a position.
 - Conference rankings are filtered views of the **same national power ranking**. Moving the 14th Big Ten team above the 13th places it immediately ahead of that team nationally. National changes also change conference order.
-- The playoff eliminator has an **independent order of playoff hopes**, initially copied from the alphabetical power board. Every team still displays its power rank. Use **Use power order** to copy your current power order into the eliminator.
-- Click × or drop a team in the eliminated section to eliminate it. Restore it with ↶. This never removes a team from power rankings. Elimination is your opinion; the app does not automatically judge postseason eligibility or decide who qualifies.
-- Choose a week on the eliminator board, then mark active teams **Safe** or **Hanging by a thread**, or eliminate them. Status changes carry into later weeks until another change. Earlier weeks keep their own status; restoring a team records a safe status for the selected week. Existing eliminations from older backups remain undated until you assign their week.
-- Status decisions save immediately in this browser, independently of **Save ranking**, and the eliminator reopens to your last selected week. The eliminator video starts with that week selected too. Changes from another tab are read before recording a new status. If cached scores fill browser storage, the app clears that replaceable cache and retries saving your rankings and decisions; a failed save remains visibly flagged.
+- The playoff eliminator **automatically follows Power rankings**. It shows each team's actual national power rank, leaving gaps for eliminated teams. Change ranking order only in Power rankings; the eliminator has no rank-editing or drag controls.
+- Choose **Eliminated** or click × to eliminate a team. Restore it with ↶. This never removes a team from power rankings. Elimination is your opinion; the app does not automatically judge postseason eligibility or decide who qualifies.
+- Choose a week on the eliminator board, then mark active teams **Safe**, **Hanging by a thread**, or **Eliminated**. A decision applies to the selected week and **every later week**, replacing that team's existing decisions from that week onward. Earlier weeks and other teams stay unchanged. A later edit can change the team's status again from its chosen week onward.
+- Status decisions save immediately in this browser and need no ranking-save step. The eliminator reopens to your last selected week, and its video starts with that week selected too. Changes from another tab are read before recording an edit. If cached scores fill browser storage, the app clears that replaceable cache and retries saving; a failed save remains visibly flagged.
+- This update performs a **one-time reset of old eliminator data only**: status decisions, independent playoff order, and playoff history. **Power ranking order, every power history entry, and power save settings are preserved.** The untouched old board is saved locally first; use **Download pre-reset backup** in the eliminator to keep that recovery file. If the recovery copy or reset cannot be saved, the original stored board is left untouched. Older imported backups also start a fresh eliminator while preserving their power data; backups from this version retain their new eliminator decisions.
 
 ## Team ranking Shorts
 
@@ -86,7 +87,7 @@ Predictions save separately from ranking boards in this browser. Use **Export pr
 
 ## Ranking history and saving
 
-- **History starts only when you first click Save ranking on that board.** The initial alphabetical order and unsaved edits are never included in the graphs or movement indicators.
+- **Power history starts only when you first click Save ranking in Power rankings.** The initial alphabetical order and unsaved edits are never included in the graphs or movement indicators. Eliminator statuses save automatically and do not create ranking snapshots.
 - Graphs show one point per week: the most recently saved ranking for that week, only through the current date. Earlier saves remain in Ranking history and in your backups.
 - After the first explicit save, future weeks record your latest order automatically when you use the app. Manual snapshots stay fixed, and the app does not add an automatic snapshot to a week that already has a manual save.
 - Open a team to see its schedule and separate power/playoff graphs. Click a graph point, then confirm, to remove only that team's historical entry. Ranking history also lets you view or delete entire snapshots with confirmation.
