@@ -19,6 +19,7 @@ Backfield Football branding uses a black-and-gold default theme and an optional 
 - The playoff eliminator has an **independent order of playoff hopes**, initially copied from the alphabetical power board. Every team still displays its power rank. Use **Use power order** to copy your current power order into the eliminator.
 - Click × or drop a team in the eliminated section to eliminate it. Restore it with ↶. This never removes a team from power rankings. Elimination is your opinion; the app does not automatically judge postseason eligibility or decide who qualifies.
 - Choose a week on the eliminator board, then mark active teams **Safe** or **Hanging by a thread**, or eliminate them. Status changes carry into later weeks until another change. Earlier weeks keep their own status; restoring a team records a safe status for the selected week. Existing eliminations from older backups remain undated until you assign their week.
+- Status decisions save immediately in this browser, independently of **Save ranking**, and the eliminator reopens to your last selected week. The eliminator video starts with that week selected too. Changes from another tab are read before recording a new status. If cached scores fill browser storage, the app clears that replaceable cache and retries saving your rankings and decisions; a failed save remains visibly flagged.
 
 ## Team ranking Shorts
 
