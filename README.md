@@ -20,6 +20,12 @@ Backfield Football branding uses a black-and-gold default theme and an optional 
 - Click × or drop a team in the eliminated section to eliminate it. Restore it with ↶. This never removes a team from power rankings. Elimination is your opinion; the app does not automatically judge postseason eligibility or decide who qualifies.
 - Choose a week on the eliminator board, then mark active teams **Safe** or **Hanging by a thread**, or eliminate them. Status changes carry into later weeks until another change. Earlier weeks keep their own status; restoring a team records a safe status for the selected week. Existing eliminations from older backups remain undated until you assign their week.
 
+## Team ranking Shorts
+
+Open **Video Tools → Open team ranking Shorts**. Search and select any number of the 138 teams, then start a **1080 × 1920** portrait presentation. Each selected team gets its own slide with its actual national power rank, logo, season record, movement, last game, weekly ranking history, and full schedule. The black-and-gold layout follows the individual Top 25 ranking slides. Teams count down from the lowest selected rank to the highest, including teams outside the Top 25.
+
+Use Previous / Next or the arrow keys to navigate, Home / End for the first / last team, and Full screen for recording. Download each slide as a portrait PNG or self-contained SVG. Change teams returns to your selection. Starting captures the current rankings and available schedules without changing your boards or saved history.
+
 ## Weekly prediction video
 
 Open **Video Tools → Open weekly predictions**, choose **YouTube (1920 × 1080)** or **YouTube Shorts (1080 × 1920)**, choose a week, and select **1–10 games** from the searchable schedule sheet. All known games in the chosen week are listed, including FCS opponents. The sheet combines bundled schedules with cached and refreshed games, so it remains usable offline. Available spreads fill in from the live feed; edit the home team's signed line before presenting (negative means the home team is favored, positive means it is the underdog, and zero means pick'em). Missing lines remain blank and can be entered manually.
@@ -54,7 +60,7 @@ Before starting, optionally enable **Include a “Just missed out” slide**. Ch
 
 Use **Previous / Next**, arrow keys, Page Up / Page Down, or Space on the slide. **Home** returns to the opening thumbnail, **End** opens the final graphic, and **Esc / Close** exits. **Full screen** is available in supporting browsers and hides the controls. The Top 25 and Just missed out graphics retain their **1600 × 1000 PNG** or scalable **SVG** downloads. On smaller screens, scroll those ranking graphics horizontally to read every team; the thumbnail fits the screen at 16:9.
 
-The presentation freezes the current board and available score data when started. It does not create history, save the board, or discard draft edits. Ranking graphs show up to 12 recent saved power rankings and a separate current-board point; no history is invented for an unsaved team. Movement compares with its latest eligible save, excluding the current week's automatic snapshot. Refresh scores or download schedules before presenting for newer results.
+The presentation freezes the current board and available score data when started. It does not create history, save the board, or discard draft edits. Ranking graphs show only the latest saved ranking for each week through the current date. Future weeks and extra saves within a week are hidden; unsaved edits do not add a separate graph point. Movement compares with its latest eligible save, excluding the current week's automatic snapshot. Refresh scores or download schedules before presenting for newer results.
 
 Presentations work offline. The portable `publish/index.html` embeds logos for offline graphic downloads. When opening the source `index.html` directly, some browsers block reading local logos for export; the downloaded graphic uses team abbreviations for unavailable logos. Localhost and the hosted version embed the downloaded logos normally.
 
@@ -80,6 +86,7 @@ Predictions save separately from ranking boards in this browser. Use **Export pr
 ## Ranking history and saving
 
 - **History starts only when you first click Save ranking on that board.** The initial alphabetical order and unsaved edits are never included in the graphs or movement indicators.
+- Graphs show one point per week: the most recently saved ranking for that week, only through the current date. Earlier saves remain in Ranking history and in your backups.
 - After the first explicit save, future weeks record your latest order automatically when you use the app. Manual snapshots stay fixed, and the app does not add an automatic snapshot to a week that already has a manual save.
 - Open a team to see its schedule and separate power/playoff graphs. Click a graph point, then confirm, to remove only that team's historical entry. Ranking history also lets you view or delete entire snapshots with confirmation.
 - Rankings save in browser storage. **Export backup** downloads a portable JSON file with both boards, eliminations, and history. **Import backup** validates and restores it after confirmation.
